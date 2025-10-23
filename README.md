@@ -16,7 +16,7 @@ Beta releases are not tested nor supported.
 
 ## Extensions
 
-### Version 3.22
+### Version 3.22.0.64
 
 #### `clock.qmd`
 - Adds a live clock to the library sidebar; tap the entry to toggle seconds display.
