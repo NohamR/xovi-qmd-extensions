@@ -14,6 +14,8 @@ Extensions have been tested only for the latest reMarkable OS version, though th
 
 Beta releases are not tested nor supported.
 
+**Note:** QMDs for version 3.22.4.2 are the same as the ones for 3.22.0.64.
+
 ## Extensions
 
 ### Version 3.22.0.64
