@@ -2,7 +2,7 @@
 
 # Configuration
 QMLDIFF="./qmldiff"
-HASHTAB="hashtab_3.22"
+HASHTAB="hashtab_3.23"
 
 # Usage
 if [ $# -lt 1 ]; then

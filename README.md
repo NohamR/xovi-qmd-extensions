@@ -16,9 +16,11 @@ Beta releases are not tested nor supported.
 
 **Note:** QMDs for version 3.22.4.2 are the same as the ones for 3.22.0.64.
 
+**Note 2:** Make sure to use latest version of qt-resource-rebuilder for best compatibility.
+
 ## Extensions
 
-### Version 3.22.0.64
+### Version 3.23.0.64
 
 #### `clock.qmd`
 - Adds a live clock to the library sidebar; tap the entry to toggle seconds display.

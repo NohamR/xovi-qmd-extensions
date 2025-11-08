@@ -9,12 +9,12 @@ AFFECT [[12542166428983872557]]
             ~&14397210151462632996&~ {
                 ~&5972374&~: quickSettingsClock
 
-                property bool showSeconds: ~&214625660372&~
+                property ~&6503679477&~ showSeconds: ~&214625660372&~
                 property ~&7083178290016&~ minuteFormat: "dd/MM hh:mm"
                 property ~&7083178290016&~ secondFormat: "dd/MM hh:mm:ss"
                 property ~&197088788&~ minuteInterval: 60000
                 property ~&197088788&~ secondInterval: 1000
-                property ~&197088788&~ cestOffset: 2 * 3600000
+                property ~&197088788&~ cestOffset: 1 * 3600000
 
                 ~&6504315758&~: ~&5971598&~.~&6460516198169535423&~(getCestTime(), minuteFormat)
 
