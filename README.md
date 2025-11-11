@@ -26,10 +26,15 @@ Beta releases are not tested nor supported.
 - Adds a live clock to the library sidebar; tap the entry to toggle seconds display.
 ![Sidebar clock showing minutes](images/clock_1.png)
 ![Sidebar clock showing seconds](images/clock_2.png)
+Note: You can add a timezone by editing the `clock.qmd` file and changing the timezone string in the line:
+```
+~&197102514&~ utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+```
 
 #### `quickSettingsClock.qmd`
 - Injects a tappable clock into the Quick Settings header; tap to toggle between minute and second precision.
 ![Quick settings clock](images/quickSettingsClock.png)
+Note: You can add a timezone by editing the `quickSettingsClock.qmd`, see above for details.
 
 #### `forceSync.qmd`
 - Adds a cloud button in Quick Settings that forces a library sync when tapped (need further testing to confirm it works as intended).
