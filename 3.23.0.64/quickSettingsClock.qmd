@@ -20,7 +20,9 @@ AFFECT [[12542166428983872557]]
 
                 function getCestTime() {
                     ~&197102514&~ now =        new        ~&6502586279&~();
-                    ~&197102514&~ utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+                    ; to add a timezone:
+                    ; ~&197102514&~ utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+                    ~&197102514&~ utc = now.getTime();
                     ~&7083121450889&~        new        ~&6502586279&~(utc + cestOffset);
                 }
 
