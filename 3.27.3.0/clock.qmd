@@ -1,60 +1,60 @@
 ; credit for the original clock implementation: https://github.com/StarNumber12046/xovi-qmd-extensions/blob/main/clock.qmd
-AFFECT /qml/device/view/navigator/Sidebar.qml
-    TRAVERSE DeviceKeyboardNavigationHandler > ColumnLayout#filterColumn
-        LOCATE BEFORE SidebarFilterItem#filterMyFiles
+AFFECT [[4911547370760691430]]
+    TRAVERSE [[3819512207256720568]] > [[14125623155555875541]]#[[15885405667098360701]]
+        LOCATE BEFORE [[16385778650434842232]]#[[7709552963638993992]]
         INSERT {
-        SidebarFilterItem {
-            id: clockSidebarItem
-            objectName: "clockSidebarObject"
-            title: Qt.formatDateTime(getCestTime(), set_Format_Date)
-            iconSource: "qrc:/ark/icons/system_clock"
-            active: false
-            enabled: true
+        ~&16385778650434842232&~ {
+            ~&5972374&~: clockSidebarItem
+            ~&8399878573055752961&~: "clockSidebarObject"
+            ~&214642559243&~: ~&5971598&~.~&6460516198169535423&~(getCestTime(), set_Format_Date)
+            ~&8399601734642709923&~: ~&"4628214070783643584&~
+            ~&7082453764421&~: ~&214625660372&~
+            ~&233726547792244&~: ~&6504329801&~
 
             /* 1000 = 1 second / 60000 = 1 minute */
-            property int set_Timer: 60000
-            property string set_Format_Date: "dd/MM hh:mm"
+            property ~&197088788&~ set_Timer: 60000
+            property ~&7083178290016&~ set_Format_Date: "dd/MM hh:mm"
 
             function getCestTime() {
-                return   new   Date();
+                ~&7083121450889&~    new    ~&6502586279&~();
             }
 
-            Component.onCompleted: {
-                title = Qt.formatDateTime(getCestTime(), set_Format_Date);
+            ~&254480451320573660&~.~&495334332051582499&~: {
+                ~&214642559243&~ = ~&5971598&~.~&6460516198169535423&~(getCestTime(), set_Format_Date);
             }
 
-            onClicked: {
+            ~&254542236275632405&~: {
 
-                if (clockSidebarItem.set_Timer === 60000) {
+                ~&5972376&~ (clockSidebarItem.set_Timer === 60000) {
                     clockSidebarItem.set_Timer = 1000;
                     clockSidebarItem.set_Format_Date = "dd/MM hh:mm:ss";
-                } else {
+                } ~&6503784146&~ {
                     clockSidebarItem.set_Timer = 60000;
                     clockSidebarItem.set_Format_Date = "dd/MM hh:mm";
                 }
 
-                    timer.interval = clockSidebarItem.set_Timer
-                    clockSidebarItem.title = Qt.formatDateTime(clockSidebarItem.getCestTime(), clockSidebarItem.set_Format_Date);
+                    ~&214642551402&~.~&7713147298280334&~ = clockSidebarItem.set_Timer
+                    clockSidebarItem.~&214642559243&~ = ~&5971598&~.~&6460516198169535423&~(clockSidebarItem.getCestTime(), clockSidebarItem.set_Format_Date);
                 }
 
             /* Timer for update time */
-            Timer {
-                id: timer
-                interval: clockSidebarItem.set_Timer
-                repeat: true
-                running: true
+            ~&214604601930&~ {
+                ~&5972374&~: ~&214642551402&~
+                ~&7713147298280334&~: clockSidebarItem.set_Timer
+                ~&7083121289162&~: ~&6504329801&~
+                ~&233743626668842&~: ~&6504329801&~
 
-                onTriggered: {
-                    clockSidebarItem.title = Qt.formatDateTime(clockSidebarItem.getCestTime(), clockSidebarItem.set_Format_Date);
+                ~&495358363329399331&~: {
+                    clockSidebarItem.~&214642559243&~ = ~&5971598&~.~&6460516198169535423&~(clockSidebarItem.getCestTime(), clockSidebarItem.set_Format_Date);
                 }
             }
 
-            Layout.preferredHeight: Values.navigatorSidebarItemHeight
-            Layout.preferredWidth: parent.width
-            navigationHandler: root
+            ~&7081629735527&~.~&17520348323745447649&~: ~&7082020628281&~.~&15061686673205541622&~
+            ~&7081629735527&~.~&7797818826744279624&~: ~&7083038346995&~.~&214646099849&~
+            ~&11921478716705041271&~: ~&6504254477&~
 
-            function activate() {
-                toggle();
+            function ~&7712792149454042&~() {
+                ~&7083211098251&~();
             }
         }
         }
