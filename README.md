@@ -20,41 +20,66 @@ Beta releases are not tested nor supported.
 
 ## Extensions
 
+### Version 3.27.3.0
+
+#### `batteryPercentage.qmd`
+- Shows the battery percentage next to the battery icon in the main view header.
+
+<img src="images/batteryPercentage.png" width="400">
+
+#### `clock.qmd`
+- Adds a live clock to the library sidebar; tap the entry to toggle seconds display.
+
+<img src="images/clock_1.png" width="400">
+<img src="images/clock_2.png" width="400">
+Note: You have to set the right timezone on the tablet (you can use [reManager](https://github.com/rmitchellscott/reManager) to set it)
+
+#### `convertToText_remover.qmd`
+- Removes the `Convert to text` option from selection menus and the toolbar (ported from 3.23.0.64).
+
+<img src="images/convertToText_remover.png" width="400">
+
+#### `uncompressDock.qmd`
+- Replaces the widget-based create menu with dedicated buttons for notebook, folder, and quick sheet creation.
+- **Rewritten** for the new `HomeScreen.CreateMenu` — the old `Navigator.CreateMenu` is no longer used in 3.27.
+- Note: Notebook and Folder use Navigator methods; Quicksheet uses `LibraryController` (experimental).
+
+<img src="images/uncompressDock.png" width="400">
+
+#### `quickSettingsClock.qmd`
+- Injects a tappable clock into the Quick Settings header; tap to toggle between minute and second precision.
+
+<img src="images/quickSettingsClock.png" width="400">
+
+### `tagButton.qmd` & `favoriteButton.qmd`
+- Those tweaks have been implemented by the reMarkable team in the latest update, so they are no longer needed :)
+
 ### Version 3.23.0.64
 
 #### `clock.qmd`
 - Adds a live clock to the library sidebar; tap the entry to toggle seconds display.
-![Sidebar clock showing minutes](images/clock_1.png)
-![Sidebar clock showing seconds](images/clock_2.png)
-Note: You can add a timezone by editing the `clock.qmd` file and changing the timezone string in the line:
-```
-~&197102514&~ utc = now.getTime() + (now.getTimezoneOffset() * 60000);
-```
 
 #### `quickSettingsClock.qmd`
 - Injects a tappable clock into the Quick Settings header; tap to toggle between minute and second precision.
-![Quick settings clock](images/quickSettingsClock.png)
-Note: You can add a timezone by editing the `quickSettingsClock.qmd`, see above for details.
 
 #### `forceSync.qmd`
 - Adds a cloud button in Quick Settings that forces a library sync when tapped (need further testing to confirm it works as intended).
-![Force sync button in quick settings](images/forceSync.png)
+<img src="images/forceSync.png" width="400">
 
 #### `favoriteButton.qmd`
 - Restores a `Favorite` action in the document list header for faster pinning.
-![Favorite button in action bar](images/favoriteButton.png)
+<img src="images/favoriteButton.png" width="400">
 
 #### `tagButton.qmd`
 - Puts a `Tag` action next to other list controls to open the tag editor directly.
-![Tag button in action bar](images/tagButton.png)
+<img src="images/tagButton.png" width="400">
 
 #### `convertToText_remover.qmd`
 - Removes the `Convert to text` option from selection menus and the toolbar.
-![Convert to text removed from menu](images/convertToText_remover.png)
 
 #### `uncompressDock.qmd`
 - Replaces the condensed `More` menu in the new document dock with dedicated buttons for notebook, folder, and quick sheet creation.
-![Expanded create menu buttons](images/uncompressDock.png)
+<img src="images/uncompressDock_old.png" width="400">
 
 #### `hideDocumentClose.qmd`
 - Hides the close button in the document toolbar to prevent accidental exits.

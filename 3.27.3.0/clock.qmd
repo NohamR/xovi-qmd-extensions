@@ -1,0 +1,62 @@
+; credit for the original clock implementation: https://github.com/StarNumber12046/xovi-qmd-extensions/blob/main/clock.qmd
+AFFECT /qml/device/view/navigator/Sidebar.qml
+    TRAVERSE DeviceKeyboardNavigationHandler > ColumnLayout#filterColumn
+        LOCATE BEFORE SidebarFilterItem#filterMyFiles
+        INSERT {
+        SidebarFilterItem {
+            id: clockSidebarItem
+            objectName: "clockSidebarObject"
+            title: Qt.formatDateTime(getCestTime(), set_Format_Date)
+            iconSource: "qrc:/ark/icons/system_clock"
+            active: false
+            enabled: true
+
+            /* 1000 = 1 second / 60000 = 1 minute */
+            property int set_Timer: 60000
+            property string set_Format_Date: "dd/MM hh:mm"
+
+            function getCestTime() {
+                return   new   Date();
+            }
+
+            Component.onCompleted: {
+                title = Qt.formatDateTime(getCestTime(), set_Format_Date);
+            }
+
+            onClicked: {
+
+                if (clockSidebarItem.set_Timer === 60000) {
+                    clockSidebarItem.set_Timer = 1000;
+                    clockSidebarItem.set_Format_Date = "dd/MM hh:mm:ss";
+                } else {
+                    clockSidebarItem.set_Timer = 60000;
+                    clockSidebarItem.set_Format_Date = "dd/MM hh:mm";
+                }
+
+                    timer.interval = clockSidebarItem.set_Timer
+                    clockSidebarItem.title = Qt.formatDateTime(clockSidebarItem.getCestTime(), clockSidebarItem.set_Format_Date);
+                }
+
+            /* Timer for update time */
+            Timer {
+                id: timer
+                interval: clockSidebarItem.set_Timer
+                repeat: true
+                running: true
+
+                onTriggered: {
+                    clockSidebarItem.title = Qt.formatDateTime(clockSidebarItem.getCestTime(), clockSidebarItem.set_Format_Date);
+                }
+            }
+
+            Layout.preferredHeight: Values.navigatorSidebarItemHeight
+            Layout.preferredWidth: parent.width
+            navigationHandler: root
+
+            function activate() {
+                toggle();
+            }
+        }
+        }
+    END TRAVERSE
+END AFFECT
