@@ -1,12 +1,18 @@
 # Xovi Extensions
 
-This repo consists of multiple xovi (.qmd) extensions that are QoL improvements to the xochitl interface. These require [qt-resource-rebuilder](https://github.com/asivery/rm-xovi-extensions/tree/master/qt-resource-rebuilder) to work.
+## Installation
 
-Instructions to install xovi can be found [here](https://github.com/asivery/rmpp-xovi-extensions/blob/master/INSTALL.MD). 
+Installation via the [Vellum package manager](https://github.com/vellum-dev/vellum) is recommended. Dependencies are handled automatically.  
+
+### Manual
+
+All extensions require qt-resource-rebuilder, some will require other xovi extensions. See each extension for details. 
+
+Instructions to install xovi can be found [here](https://github.com/asivery/rmpp-xovi-extensions). 
 
 Download the extensions from the folder matching your reMarkable software version. 
 
-Copy the `.qmd` files to `/home/root/xovi/exthome/qt-resource-rebuilder/` and restart xovi.
+Copy the `.qmd` files to `/home/root/xovi/exthome/qt-resource-rebuilder/` and restart xovi. 
 
 Some of the QMD files in this repo are my own and some are modifications I've made to extensions created by others in the community. Modifications will link to the original author.
 
@@ -24,11 +30,13 @@ Beta releases are not tested nor supported.
 
 #### `batteryPercentage.qmd`
 - Shows the battery percentage next to the battery icon in the main view header.
+<!-- [![vellum](https://img.shields.io/badge/vellum-battery--percentage-purple)](https://vellum.delivery/#/package/battery-percentage/) -->
 
 <img src="images/batteryPercentage.png" width="400">
 
 #### `clock.qmd`
 - Adds a live clock to the library sidebar; tap the entry to toggle seconds display.
+[![vellum](https://img.shields.io/badge/vellum-sidebar--clock-purple)](https://vellum.delivery/#/package/sidebar-clock/)
 
 <img src="images/clock_1.png" width="400">
 <img src="images/clock_2.png" width="400">
@@ -36,6 +44,7 @@ Note: You have to set the right timezone on the tablet (you can use [reManager](
 
 #### `convertToText_remover.qmd`
 - Removes the `Convert to text` option from selection menus and the toolbar (ported from 3.23.0.64).
+[![vellum](https://img.shields.io/badge/vellum-convert--to--text--remover-purple)](https://vellum.delivery/#/package/convert-to-text-remover/)
 
 <img src="images/convertToText_remover.png" width="400">
 
@@ -43,11 +52,13 @@ Note: You have to set the right timezone on the tablet (you can use [reManager](
 - Replaces the widget-based create menu with dedicated buttons for notebook, folder, and quick sheet creation.
 - **Rewritten** for the new `HomeScreen.CreateMenu` — the old `Navigator.CreateMenu` is no longer used in 3.27.
 - Note: Notebook and Folder use Navigator methods; Quicksheet uses `LibraryController` (experimental).
+[![vellum](https://img.shields.io/badge/vellum-uncompress--dock-purple)](https://vellum.delivery/#/package/uncompress-dock/)
 
 <img src="images/uncompressDock.png" width="400">
 
 #### `quickSettingsClock.qmd`
 - Injects a tappable clock into the Quick Settings header; tap to toggle between minute and second precision.
+Use [quicksettings-clock-serif](https://github.com/rmitchellscott) by rmitchellscott instead.
 
 <img src="images/quickSettingsClock.png" width="400">
 
@@ -64,14 +75,17 @@ Note: You have to set the right timezone on the tablet (you can use [reManager](
 
 #### `forceSync.qmd`
 - Adds a cloud button in Quick Settings that forces a library sync when tapped (need further testing to confirm it works as intended).
+[![vellum](https://img.shields.io/badge/vellum-force--sync-purple)](https://vellum.delivery/#/package/force-sync/)
 <img src="images/forceSync.png" width="400">
 
 #### `favoriteButton.qmd`
 - Restores a `Favorite` action in the document list header for faster pinning.
+[![vellum](https://img.shields.io/badge/vellum-favorite--button-purple)](https://vellum.delivery/#/package/favorite-button/)
 <img src="images/favoriteButton.png" width="400">
 
 #### `tagButton.qmd`
 - Puts a `Tag` action next to other list controls to open the tag editor directly.
+[![vellum](https://img.shields.io/badge/vellum-tag--button-purple)](https://vellum.delivery/#/package/tag-button/)
 <img src="images/tagButton.png" width="400">
 
 #### `convertToText_remover.qmd`
@@ -83,3 +97,4 @@ Note: You have to set the right timezone on the tablet (you can use [reManager](
 
 #### `hideDocumentClose.qmd`
 - Hides the close button in the document toolbar to prevent accidental exits.
+Use [hide-document-close](https://github.com/ingatellent) by ingatellent instead.
