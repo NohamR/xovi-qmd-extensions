@@ -29,7 +29,7 @@ Beta releases are not tested nor supported.
 ### Version 3.27.3.0
 
 #### `batteryPercentage.qmd`
-<!-- [![vellum](https://img.shields.io/badge/vellum-battery--percentage-purple)](https://vellum.delivery/#/package/battery-percentage/) -->
+[![vellum](https://img.shields.io/badge/vellum-battery--percentage-purple)](https://vellum.delivery/#/package/battery-percentage/)
 - Shows the battery percentage next to the battery icon in the main view header.
 
 <img src="images/batteryPercentage.png" width="400">
