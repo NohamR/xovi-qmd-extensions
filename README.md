@@ -92,13 +92,19 @@ Use [quicksettings-clock-serif](https://github.com/rmitchellscott) by rmitchells
 
 ### `quickSettingsTimer.qmd`
 <!-- [![vellum](https://img.shields.io/badge/vellum-quicksettings--timer-purple)](https://vellum.delivery/#/package/quicksettings-timer/) -->
-- Adds a countdown timer and stopwatch to the Quick Settings panel, under the light slider.
-- Switch between Timer (presets: 1min, 5min, 10min, 30min, 1h) and Chrono (start/stop) modes.
-- Preset buttons respect the add/set mode toggle : <img src="images/plus.svg" width="20" height="20"> increments, <img src="images/plus_circle.svg" width="20" height="20"> replaces.
-- Notification bar shows "Time's up! (duration)" when the timer finishes.
+- Adds a countdown timer, stopwatch, and alarm system to the Quick Settings panel, under the light slider.
+- Timer: presets: 1min, 5min, 10min, 30min, 1h; add/set mode toggle (<img src="images/plus.svg" width="20" height="20"> increments, <img src="images/plus_circle.svg" width="20" height="20"> replaces), start/stop/reset controls.
+- Chrono: start/stop with lap-style elapsed time display.
+- Alarm: configure recurring alarms in the system clock settings menu with a time picker (hour/minute spinners), quick-off buttons (00/15/30/45, +15/+30/+45), and a "Now" button. Each alarm has an enable/disable toggle and a delete button.
+- Flash light toggle in the alarm settings page: when enabled, the reading light blinks 3 times when the timer finishes or an alarm triggers.
+- Persistence: alarms and the flash light toggle are saved to `file:///home/root/alarms.json` on changes and auto-loaded on startup.
+- Notification bar: shows "Time's up! (duration)" when the timer finishes, or "Alarm at HH:MM" when an alarm triggers. Timer offers Restart/+1min/+5min buttons; alarm offers a Dismiss button.
+- Quick access: an "Add alarms" button in Quick Settings opens the system clock alarm management page directly.
+- Setting page: Go to `Settings > Help > System Time` to manage alarms and the flash light toggle.
 
-<img src="images/quickSettingsTimer_1.png" width="300"> <img src="images/quickSettingsTimer_2.png" width="300">
-<img src="images/quickSettingsTimer_3.png" width="600">
+<img src="images/quickSettingsTimer_1.png" width="200"><img src="images/quickSettingsTimer_2.png" width="200"><img src="images/quickSettingsTimer_3.png" width="200">
+<img src="images/quickSettingsTimer_4.png" width="600">
+<img src="images/quickSettingsTimer_5.png" width="600">
 
 **Available for:** `3.24.0.149`, `3.25.1.1`, `3.26.0.68`, `3.27.1.0`, `3.27.3.0`
 
