@@ -91,12 +91,12 @@ Use [quicksettings-clock-serif](https://github.com/rmitchellscott) by rmitchells
 ---
 
 ### `quickSettingsTimer.qmd`
-<!-- [![vellum](https://img.shields.io/badge/vellum-quicksettings--timer-purple)](https://vellum.delivery/#/package/quicksettings-timer/) -->
+[![vellum](https://img.shields.io/badge/vellum-quicksettings--timer-purple)](https://vellum.delivery/#/package/quicksettings-timer/)
 - Adds a countdown timer, stopwatch, and alarm system to the Quick Settings panel, under the light slider.
 - Timer: presets: 1min, 5min, 10min, 30min, 1h; add/set mode toggle (<img src="images/plus.svg" width="20" height="20"> increments, <img src="images/plus_circle.svg" width="20" height="20"> replaces), start/stop/reset controls.
 - Chrono: start/stop with lap-style elapsed time display.
 - Alarm: configure recurring alarms in the system clock settings menu with a time picker (hour/minute spinners), quick-off buttons (00/15/30/45, +15/+30/+45), and a "Now" button. Each alarm has an enable/disable toggle and a delete button.
-- Flash light toggle in the alarm settings page: when enabled, the reading light blinks 3 times when the timer finishes or an alarm triggers.
+- Flash light toggle in the alarm settings page: when enabled, the reading light blinks 3 times when the timer finishes or an alarm triggers. (Only on devices with a reading light.)
 - Persistence: alarms and the flash light toggle are saved to `file:///home/root/alarms.json` on changes and auto-loaded on startup.
 - Notification bar: shows "Time's up! (duration)" when the timer finishes, or "Alarm at HH:MM" when an alarm triggers. Timer offers Restart/+1min/+5min buttons; alarm offers a Dismiss button.
 - Quick access: an "Add alarms" button in Quick Settings opens the system clock alarm management page directly.
