@@ -34,12 +34,21 @@ Beta releases are not tested nor supported.
 
 <img src="images/batteryPercentage.png" width="400">
 
+#### `quickSettingsTimer.qmd`
+<!-- [![vellum](https://img.shields.io/badge/vellum-quick--settings--timer-purple)](https://vellum.delivery/#/package/quick-settings-timer/) -->
+- Adds a countdown timer and stopwatch to the Quick Settings panel, under the light slider.
+- Switch between Timer (presets: 1min, 5min, 10min, 30min, 1h) and Chrono (start/stop) modes.
+- Preset buttons respect the add/set mode toggle : <img src="images/plus.svg" width="20" height="20"> increments, <img src="images/plus_circle.svg" width="20" height="20"> replaces.
+- Notification bar shows "Time's up! (duration)" when the timer finishes.
+
+<img src="images/quickSettingsTimer_1.png" width="300"> <img src="images/quickSettingsTimer_2.png" width="300">
+<img src="images/quickSettingsTimer_3.png" width="600">
+
 #### `clock.qmd`
 [![vellum](https://img.shields.io/badge/vellum-sidebar--clock-purple)](https://vellum.delivery/#/package/sidebar-clock/)
 - Adds a live clock to the library sidebar; tap the entry to toggle seconds display.
 
-<img src="images/clock_1.png" width="400">
-<img src="images/clock_2.png" width="400">
+<img src="images/clock_1.png" width="300"><img src="images/clock_2.png" width="300">
 Note: You have to set the right timezone on the tablet (you can use [reManager](https://github.com/rmitchellscott/reManager) to set it)
 
 #### `convertToText_remover.qmd`
