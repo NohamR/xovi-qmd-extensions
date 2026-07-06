@@ -6,6 +6,7 @@ Installation via the [Vellum package manager](https://github.com/vellum-dev/vell
 
 ### Manual
 
+<details>
 All extensions require qt-resource-rebuilder, some will require other xovi extensions. See each extension for details.
 
 Instructions to install xovi can be found [here](https://github.com/asivery/rmpp-xovi-extensions).
@@ -13,31 +14,29 @@ Instructions to install xovi can be found [here](https://github.com/asivery/rmpp
 Download the extensions from the folder matching your reMarkable software version.
 
 Copy the `.qmd` files to `/home/root/xovi/exthome/qt-resource-rebuilder/` and restart xovi.
+</details>
 
-Some of the QMD files in this repo are my own and some are modifications I've made to extensions created by others in the community. Modifications will link to the original author.
+## Notes
+Some of the QMD files in this repo are my own and some are modifications I've made to extensions created by others in the community. Modifications will link to the original author. Extensions have been tested only for the latest reMarkable OS version, though they may work on newer versions.
 
-Extensions have been tested only for the latest reMarkable OS version, though they may work on newer versions.
+## Compatibility
 
-Beta releases are not tested nor supported.
+| Extension               | `3.22.0.64` | `3.23.0.64` | `3.24.0.149` | `3.25.1.1` | `3.26.0.68` | `3.27.1.0` | `3.27.3.0` | Comment                                                                          |
+| ----------------------- | ----------- | ----------- | ------------ | ---------- | ----------- | ---------- | ---------- | -------------------------------------------------------------------------------- |
+| `batteryPercentage`     | ❌          | ❌          | ✅           | ✅         | ✅          | ✅         | ✅         |                                                                                  |
+| `clock`                 | ✅          | ✅          | ✅           | ✅         | ✅          | ✅         | ✅         |                                                                                  |
+| `convertToText_remover` | ✅          | ✅          | ✅           | ✅         | ✅          | ✅         | ✅         |                                                                                  |
+| `hideDocumentClose`     | ✅          | ✅          | ❌           | ❌         | ❌          | ❌         | ❌         | Use [hide-document-close](https://github.com/ingatellent) by ingatellent instead |
+| `quickSettingsClock`    | ✅          | ✅          | ✅           | ✅         | ✅          | ✅         | ✅         |                                                                                  |
+| `quickSettingsTimer`    | ❌          | ❌          | ✅           | ✅         | ✅          | ✅         | ✅         |                                                                                  |
+| `uncompressDock`        | ✅          | ✅          | ✅           | ✅         | ✅          | ✅         | ✅         |                                                                                  |
+| `favoriteButton`        | ✅          | ✅          | ❌           | ❌         | ❌          | ❌         | ❌         | Implemented by reMarkable in later versions                                      |
+| `forceSync`             | ✅          | ✅          | ❌           | ❌         | ❌          | ❌         | ❌         | WIP                                                                              |
+| `tagButton`             | ✅          | ✅          | ❌           | ❌         | ❌          | ❌         | ❌         | Implemented by reMarkable in later versions                                      |
 
 **Note:** QMDs for version `3.22.4.2` are the same as the ones for `3.22.0.64`.
 
 **Note 2:** Make sure to use latest version of qt-resource-rebuilder for best compatibility.
-
-## Compatibility
-
-| Extension | `3.22.0.64` | `3.23.0.64` | `3.24.0.149` | `3.25.1.1` | `3.26.0.68` | `3.27.1.0` | `3.27.3.0` |
-|---|---|---|---|---|---|---|---|
-| `batteryPercentage` | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `clock` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `convertToText_remover` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `favoriteButton` | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| `forceSync` | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| `hideDocumentClose` | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| `quickSettingsClock` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `quickSettingsTimer` | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `tagButton` | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| `uncompressDock` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 ## Extensions
 
@@ -73,26 +72,6 @@ Beta releases are not tested nor supported.
 
 ---
 
-### `favoriteButton.qmd`
-[![vellum](https://img.shields.io/badge/vellum-favorite--button-purple)](https://vellum.delivery/#/package/favorite-button/)
-- Restores a `Favorite` action in the document list header for faster pinning.
-
-<img src="images/favoriteButton.png" width="400">
-
-**Available for:** `3.22.0.64`, `3.23.0.64`
-
----
-
-### `forceSync.qmd`
-[![vellum](https://img.shields.io/badge/vellum-force--sync-purple)](https://vellum.delivery/#/package/force-sync/)
-- Adds a cloud button in Quick Settings that forces a library sync when tapped (need further testing to confirm it works as intended).
-
-<img src="images/forceSync.png" width="400">
-
-**Available for:** `3.22.0.64`, `3.23.0.64`
-
----
-
 ### `hideDocumentClose.qmd`
 - Hides the close button in the document toolbar to prevent accidental exits.
 Use [hide-document-close](https://github.com/ingatellent) by ingatellent instead.
@@ -125,16 +104,6 @@ Use [quicksettings-clock-serif](https://github.com/rmitchellscott) by rmitchells
 
 ---
 
-### `tagButton.qmd`
-[![vellum](https://img.shields.io/badge/vellum-tag--button-purple)](https://vellum.delivery/#/package/tag-button/)
-- Puts a `Tag` action next to other list controls to open the tag editor directly.
-
-<img src="images/tagButton.png" width="400">
-
-**Available for:** `3.22.0.64`, `3.23.0.64`
-
----
-
 ### `uncompressDock.qmd`
 [![vellum](https://img.shields.io/badge/vellum-uncompress--dock-purple)](https://vellum.delivery/#/package/uncompress-dock/)
 - Replaces the widget-based create menu with dedicated buttons for notebook, folder, and quick sheet creation.
@@ -144,3 +113,35 @@ Use [quicksettings-clock-serif](https://github.com/rmitchellscott) by rmitchells
 <img src="images/uncompressDock.png" width="400">
 
 **Available for:** `3.22.0.64`, `3.23.0.64`, `3.24.0.149`, `3.25.1.1`, `3.26.0.68`, `3.27.1.0`, `3.27.3.0`
+
+---
+
+### `favoriteButton.qmd`
+[![vellum](https://img.shields.io/badge/vellum-favorite--button-purple)](https://vellum.delivery/#/package/favorite-button/)
+- Restores a `Favorite` action in the document list header for faster pinning.
+
+<img src="images/favoriteButton.png" width="400">
+
+**Available for:** `3.22.0.64`, `3.23.0.64`\*
+*\*No longer needed — implemented by reMarkable in later versions.*
+
+---
+
+### `forceSync.qmd`
+[![vellum](https://img.shields.io/badge/vellum-force--sync-purple)](https://vellum.delivery/#/package/force-sync/)
+- Adds a cloud button in Quick Settings that forces a library sync when tapped (WIP — further testing needed).
+
+<img src="images/forceSync.png" width="400">
+
+**Available for:** `3.22.0.64`, `3.23.0.64`
+
+---
+
+### `tagButton.qmd`
+[![vellum](https://img.shields.io/badge/vellum-tag--button-purple)](https://vellum.delivery/#/package/tag-button/)
+- Puts a `Tag` action next to other list controls to open the tag editor directly.
+
+<img src="images/tagButton.png" width="400">
+
+**Available for:** `3.22.0.64`, `3.23.0.64`\*
+*\*No longer needed — implemented by reMarkable in later versions.*
