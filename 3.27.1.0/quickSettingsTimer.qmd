@@ -28,8 +28,8 @@ AFFECT [[1658694193319203921]]
                 property ~&7083178290016&~ alarmNotificationText: ""
                 property ~&197088788&~ lastNotifiedMinute: -1 /* absolute epoch-minute of the last fired alarm*/
 
-                function fmt(~&5972521&~) {
-                    ~&197102514&~ ~&180970&~ = ~&6502909715&~.~&197079679&~(~&5972521&~);
+                function fmt(ms) {
+                    ~&197102514&~ ~&180970&~ = ~&6502909715&~.~&197079679&~(ms);
                     ~&197102514&~ ~&180977&~ = ~&6502909715&~.~&214626058827&~(~&180970&~ / 3600000);
                     ~&197102514&~ ~&180982&~ = ~&6502909715&~.~&214626058827&~((~&180970&~ % 3600000) / 60000);
                     ~&197102514&~ ~&180988&~ = ~&6502909715&~.~&214626058827&~((~&180970&~ % 60000) / 1000);
@@ -511,7 +511,7 @@ AFFECT [[12542166428983872557]]
 END AFFECT
 
 ; Alarm management inside system clock settings (inserted before the info message for more space)
-AFFECT [[15410910318338348835]]
+AFFECT /qt/qml/xofm/modules/systemclock/qml/window/SettingsInfoWindow.qml
     TRAVERSE [[7711468349764991]]#[[6504254477]] > [[8397788359424131273]] > [[14125623155555875541]]#[[8399784311425937276]]
         LOCATE AFTER [[425121728314878811.214599571833]]#[[254526274719339159]]
         INSERT {
